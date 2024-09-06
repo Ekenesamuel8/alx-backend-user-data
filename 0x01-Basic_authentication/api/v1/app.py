@@ -22,7 +22,7 @@ auth = None
 auth_type = getenv('AUTH_TYPE', None)
 
 
-# Check the AUTH_TYPE environment variable and create the appropriate auth instance
+# Check the AUTH_TYPE environment variable and create theAppropriateAuth inst
 if auth_type == 'basic_auth':
     auth = BasicAuth()  # create an instance of BasicAuth
 else:
@@ -58,7 +58,8 @@ def before_request_handler():
         return
 
     # List of paths that do not require authentication
-    excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/']
+    excluded_paths = [
+            '/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/']
 
     # Check if the request path requires authentication
     if not auth.require_auth(request.path, excluded_paths):
