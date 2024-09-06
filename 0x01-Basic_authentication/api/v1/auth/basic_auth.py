@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ BasicAuth class module.
 """
+import base64
 from api.v1.auth.auth import Auth
 
 
